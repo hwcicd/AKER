@@ -1,3 +1,5 @@
+// Based on file authored by Andres Meza
+
 module axi_m_generic_module(
         r_misb_clk_cnt_out,
         r_ready_to_sample_out,
