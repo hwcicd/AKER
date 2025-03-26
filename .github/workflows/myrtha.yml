@@ -1,0 +1,16 @@
+name: Myrtha 
+  
+on: push
+
+jobs:
+  generate-spec:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/hwcicd/myrtha:latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: make
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Specification
+        path: spec.out
